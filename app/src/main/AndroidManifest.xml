@@ -22,7 +22,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.fghilmany.academy2.ui.home.HomeActivity"/>
         </activity>
-        <activity android:name=".CourseReaderActivity" />
+        <activity android:name=".ui.reader.CourseReaderActivity" />
         <activity android:name="com.fghilmany.academy2.ui.home.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
