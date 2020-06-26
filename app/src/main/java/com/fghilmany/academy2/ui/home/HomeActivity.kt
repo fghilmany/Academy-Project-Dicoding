@@ -1,7 +1,7 @@
 package com.fghilmany.academy2.ui.home
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.fghilmany.academy2.R
 import kotlinx.android.synthetic.main.activity_home.*
 

@@ -2,23 +2,26 @@ package com.fghilmany.academy2.ui.reader.list
 
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.fghilmany.academy2.CourseReaderActivity
 import com.fghilmany.academy2.R
 import com.fghilmany.academy2.data.ModuleEntity
+import com.fghilmany.academy2.ui.reader.CourseReaderActivity
 import com.fghilmany.academy2.ui.reader.CourseReaderCallback
-import com.fghilmany.academy2.utils.DataDummy
+import com.fghilmany.academy2.ui.reader.CourseReaderViewModel
 import kotlinx.android.synthetic.main.fragment_module_list.*
 
 /**
  * A simple [Fragment] subclass.
  */
 class ModuleListFragment : Fragment(), MyAdapterClickListener {
+
+    private lateinit var viewModel: CourseReaderViewModel
 
     companion object {
         val TAG = ModuleListFragment::class.java.simpleName
@@ -39,9 +42,9 @@ class ModuleListFragment : Fragment(), MyAdapterClickListener {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
+        viewModel = ViewModelProvider(requireActivity(), ViewModelProvider.NewInstanceFactory())[CourseReaderViewModel::class.java]
         adapterList = ModuleListAdapter(this)
-        populateRecyclerView(DataDummy.generateDummyModules("a14"))
+        populateRecyclerView(viewModel.getModules())
 
     }
 
@@ -64,6 +67,7 @@ class ModuleListFragment : Fragment(), MyAdapterClickListener {
 
     override fun onItemClicked(position: Int, moduleId: String) {
         courseReaderCallback.moveTo(position, moduleId)
+        viewModel.setSelectedModule(moduleId)
 
     }
 
