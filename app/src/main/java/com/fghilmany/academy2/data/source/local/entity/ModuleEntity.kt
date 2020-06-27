@@ -1,4 +1,6 @@
-package com.fghilmany.academy2.data
+package com.fghilmany.academy2.data.source.local.entity
+
+import com.fghilmany.academy2.data.source.local.entity.ContentEntity
 
 data class ModuleEntity(
     var moduleId: String,
