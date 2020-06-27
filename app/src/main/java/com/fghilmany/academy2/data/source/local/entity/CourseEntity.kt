@@ -1,4 +1,4 @@
-package com.fghilmany.academy2.data
+package com.fghilmany.academy2.data.source.local.entity
 
 data class CourseEntity(
     var courseId: String,
