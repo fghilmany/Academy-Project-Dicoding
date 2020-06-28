@@ -2,7 +2,9 @@ package com.fghilmany.academy2.ui.detail
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -37,9 +39,13 @@ class DetailCourseActivity : AppCompatActivity() {
             val courseId = extras.getString(EXTRA_COURSE)
             if (courseId != null) {
                 viewModel.selectedCourse(courseId)
-                val modules = viewModel.getModules()
-                adapter.setModules(modules)
-                populateCourse(viewModel.getCourse())
+                progress_bar.visibility = View.VISIBLE
+                viewModel.getModules().observe(this, Observer { modules ->
+                    progress_bar.visibility = View.GONE
+                    adapter.setModules(modules)
+                    adapter.notifyDataSetChanged()
+                })
+                viewModel.getCourse().observe(this, Observer { courses -> populateCourse(courses) })
             }
         }
 
