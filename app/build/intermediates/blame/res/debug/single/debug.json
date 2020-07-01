@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/build/intermediates/res/merged/debug/layout_items_module_list.xml.flat",
-        "source": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/src/main/res/layout/items_module_list.xml"
-    },
-    {
         "merged": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/build/intermediates/res/merged/debug/layout_items_module_list.xml.flat",
+        "source": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/src/main/res/layout/items_module_list.xml"
     },
     {
         "merged": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/build/intermediates/res/merged/debug/layout_items_module_list_custom.xml.flat",
@@ -16,12 +16,12 @@
         "source": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/build/intermediates/res/merged/debug/drawable_ic_error.xml.flat",
-        "source": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/src/main/res/drawable/ic_error.xml"
-    },
-    {
         "merged": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/build/intermediates/res/merged/debug/layout_activity_course_reader.xml.flat",
         "source": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/src/main/res/layout/activity_course_reader.xml"
+    },
+    {
+        "merged": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/build/intermediates/res/merged/debug/drawable_ic_error.xml.flat",
+        "source": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/src/main/res/drawable/ic_error.xml"
     },
     {
         "merged": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
@@ -30,6 +30,10 @@
     {
         "merged": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/build/intermediates/res/merged/debug/layout_items_academy.xml.flat",
         "source": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/src/main/res/layout/items_academy.xml"
+    },
+    {
+        "merged": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/build/intermediates/res/merged/debug/drawable_ic_bookmark_selector.xml.flat",
+        "source": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/src/main/res/drawable/ic_bookmark_selector.xml"
     },
     {
         "merged": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
@@ -46,6 +50,10 @@
     {
         "merged": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/build/intermediates/res/merged/debug/drawable_ic_bookmarked_white.xml.flat",
+        "source": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/src/main/res/drawable/ic_bookmarked_white.xml"
     },
     {
         "merged": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
@@ -108,6 +116,10 @@
         "source": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
+        "merged": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/build/intermediates/res/merged/debug/drawable_bg_button_disable.xml.flat",
+        "source": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/src/main/res/drawable/bg_button_disable.xml"
+    },
+    {
         "merged": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/build/intermediates/res/merged/debug/drawable_bg_button.xml.flat",
         "source": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/src/main/res/drawable/bg_button.xml"
     },
@@ -122,6 +134,14 @@
     {
         "merged": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/build/intermediates/res/merged/debug/drawable_ic_bookmark_white.xml.flat",
+        "source": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/src/main/res/drawable/ic_bookmark_white.xml"
+    },
+    {
+        "merged": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/build/intermediates/res/merged/debug/menu_menu_detail.xml.flat",
+        "source": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/src/main/res/menu/menu_detail.xml"
     },
     {
         "merged": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",

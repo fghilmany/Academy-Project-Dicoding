@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -16,6 +17,7 @@ import com.fghilmany.academy2.ui.reader.CourseReaderActivity
 import com.fghilmany.academy2.ui.reader.CourseReaderCallback
 import com.fghilmany.academy2.ui.reader.CourseReaderViewModel
 import com.fghilmany.academy2.viewmodel.ViewModelFactory
+import com.fghilmany.academy2.vo.Status
 import kotlinx.android.synthetic.main.fragment_module_list.*
 
 /**
@@ -49,9 +51,20 @@ class ModuleListFragment : Fragment(), MyAdapterClickListener {
         adapterList = ModuleListAdapter(this)
 
         progress_bar.visibility = View.VISIBLE
-        viewModel.getModules().observe(viewLifecycleOwner, Observer { modules ->
-            progress_bar.visibility = View.GONE
-            populateRecyclerView(modules)
+        viewModel.modules.observe(this, Observer{ moduleEntities ->
+            if (moduleEntities != null) {
+                when (moduleEntities.status) {
+                    Status.LOADING -> progress_bar.visibility = View.VISIBLE
+                    Status.SUCCESS -> {
+                        progress_bar.visibility = View.GONE
+                        populateRecyclerView(moduleEntities.data as List<ModuleEntity>)
+                    }
+                    Status.ERROR -> {
+                        progress_bar.visibility = View.GONE
+                        Toast.makeText(context, "Terjadi kesalahan", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
         })
 
     }

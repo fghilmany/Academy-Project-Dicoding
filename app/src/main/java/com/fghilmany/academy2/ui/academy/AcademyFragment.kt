@@ -1,15 +1,18 @@
 package com.fghilmany.academy2.ui.academy
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.fghilmany.academy2.R
 import com.fghilmany.academy2.viewmodel.ViewModelFactory
+import com.fghilmany.academy2.vo.Status
 import kotlinx.android.synthetic.main.fragment_academy.*
 
 /**
@@ -32,11 +35,23 @@ class AcademyFragment : Fragment() {
             val viewModel = ViewModelProvider(this, factory)[AcademyViewModel::class.java]
 
             val academyAdapter = AcademyAdapter()
-            progress_bar.visibility = View.VISIBLE
-            viewModel.getCourse().observe(this, Observer { courses ->
-                progress_bar.visibility = View.GONE
-                academyAdapter.setCourse(courses)
-                academyAdapter.notifyDataSetChanged()
+            viewModel.getCourse().observe(viewLifecycleOwner, Observer { courses ->
+               if (courses != null){
+                   when (courses.status){
+                       Status.LOADING ->{
+                           progress_bar.visibility = View.VISIBLE
+                       }
+                       Status.SUCCESS -> {
+                           progress_bar.visibility = View.GONE
+                           academyAdapter.setCourse(courses.data)
+                           academyAdapter.notifyDataSetChanged()
+                       }
+                       Status.ERROR ->{
+                           progress_bar.visibility = View.GONE
+                           Toast.makeText(context, "Terjadi kesalahan", Toast.LENGTH_SHORT).show()
+                       }
+                   }
+               }
             })
 
             with(rv_academy){

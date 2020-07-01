@@ -66,6 +66,13 @@
 37-->/home/fghilmany/Documents/JetpackPro/Academy#2/app/src/main/AndroidManifest.xml:30:27-74
 38            </intent-filter>
 39        </activity>
-40    </application>
-41
-42</manifest>
+40
+41        <service
+41-->[androidx.room:room-runtime:2.2.3] /home/fghilmany/.gradle/caches/transforms-2/files-2.1/44f16e2e110086b6aba3724d2d528987/room-runtime-2.2.3/AndroidManifest.xml:25:9-27:40
+42            android:name="androidx.room.MultiInstanceInvalidationService"
+42-->[androidx.room:room-runtime:2.2.3] /home/fghilmany/.gradle/caches/transforms-2/files-2.1/44f16e2e110086b6aba3724d2d528987/room-runtime-2.2.3/AndroidManifest.xml:26:13-74
+43            android:exported="false" />
+43-->[androidx.room:room-runtime:2.2.3] /home/fghilmany/.gradle/caches/transforms-2/files-2.1/44f16e2e110086b6aba3724d2d528987/room-runtime-2.2.3/AndroidManifest.xml:27:13-37
+44    </application>
+45
+46</manifest>

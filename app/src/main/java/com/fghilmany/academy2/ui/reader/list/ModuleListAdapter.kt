@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.fghilmany.academy2.R
 import com.fghilmany.academy2.data.source.local.entity.ModuleEntity
@@ -29,12 +30,26 @@ ModuleListAdapter internal constructor(private val listener: MyAdapterClickListe
     override fun onBindViewHolder(holder: ModuleViewHolder, position: Int) {
         val module = listModules[position]
         holder.bind(module)
-        holder.itemView.setOnClickListener {
-            listener.onItemClicked(holder.adapterPosition, listModules[holder.adapterPosition].moduleId)
+        if (holder.itemViewType == 0){
+            holder.textModuleTitle.setTextColor(ContextCompat.getColor(holder.itemView.context, R.color.colorTextSecondary))
+        }else{
+            holder.itemView.setOnClickListener {
+                listener.onItemClicked(holder.adapterPosition, listModules[holder.adapterPosition].moduleId)
+            }
         }
     }
 
-    class ModuleViewHolder (itemView: View): RecyclerView.ViewHolder(itemView) {
+    override fun getItemViewType(position: Int): Int {
+        val modulePosition = listModules[position].position
+        return when {
+            modulePosition == 0 -> 1
+            listModules[modulePosition - 1].read -> 1
+            else -> 0
+        }
+    }
+
+    inner class ModuleViewHolder (itemView: View): RecyclerView.ViewHolder(itemView) {
+        val textModuleTitle = itemView.findViewById<TextView>(R.id.text_module_title)
         private val textTitle : TextView = itemView.findViewById(R.id.text_module_title)
         fun bind(module: ModuleEntity){
             textTitle.text = module.title
