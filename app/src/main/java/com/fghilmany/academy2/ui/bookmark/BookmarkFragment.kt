@@ -1,6 +1,7 @@
 package com.fghilmany.academy2.ui.bookmark
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -35,7 +36,7 @@ class BookmarkFragment : Fragment(), BookmarkFragmentCallback {
 
             val adapter = BookmarkAdapter(this)
             progress_bar.visibility = View.VISIBLE
-            viewModel.getBookmarks().observe(this, Observer { courses ->
+            viewModel.getBookmarks().observe(viewLifecycleOwner, Observer { courses ->
                 progress_bar.visibility = View.GONE
                 adapter.setCourse(courses)
                 adapter.notifyDataSetChanged()
