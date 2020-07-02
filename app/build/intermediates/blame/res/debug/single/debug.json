@@ -1,11 +1,15 @@
 [
     {
-        "merged": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+        "merged": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/build/intermediates/res/merged/debug/layout-sw600dp_activity_course_reader.xml.flat",
+        "source": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/src/main/res/layout-sw600dp/activity_course_reader.xml"
     },
     {
         "merged": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/build/intermediates/res/merged/debug/layout_items_module_list.xml.flat",
         "source": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/src/main/res/layout/items_module_list.xml"
+    },
+    {
+        "merged": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
         "merged": "/home/fghilmany/Documents/JetpackPro/Academy#2/app/build/intermediates/res/merged/debug/layout_items_module_list_custom.xml.flat",

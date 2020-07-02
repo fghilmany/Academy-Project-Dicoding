@@ -1,4 +1,4 @@
-#Tue Jun 30 22:53:07 WIB 2020
+#Thu Jul 02 12:21:25 WIB 2020
 base.0=/home/fghilmany/Documents/JetpackPro/Academy\#2/app/build/intermediates/dex/debug/mergeExtDexDebug/out/classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex
