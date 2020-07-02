@@ -1,7 +1,6 @@
 package com.fghilmany.academy2.ui.academy
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -43,7 +42,7 @@ class AcademyFragment : Fragment() {
                        }
                        Status.SUCCESS -> {
                            progress_bar.visibility = View.GONE
-                           academyAdapter.setCourse(courses.data)
+                           academyAdapter.submitList(courses.data)
                            academyAdapter.notifyDataSetChanged()
                        }
                        Status.ERROR ->{

@@ -1028,6 +1028,7 @@ dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen action_bar_size
+dimen activity_horizontal_margin
 dimen appcompat_dialog_background_inset
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
@@ -1563,6 +1564,8 @@ id fixed
 id forever
 id fragment_container_view_tag
 id frame_container
+id frame_content
+id frame_list
 id ghost_view
 id ghost_view_holder
 id glide_custom_view_target_tag
